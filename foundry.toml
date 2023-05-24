@@ -1,0 +1,19 @@
+[profile.default]
+solc = '0.8.13'
+src = 'contracts/src'
+test = 'contracts/test'
+libs = ['contracts/lib']
+
+cache = true
+cache_path = 'build/cache'
+out = 'build/out'
+
+# See more config options https://github.com/foundry-rs/foundry/tree/master/config
+
+fs_permissions = [
+	{ access = "read", path = "./deployments"},
+	{ access = "read", path = "./out"},
+]
+
+# used for dev
+allow_paths = ["../../"]

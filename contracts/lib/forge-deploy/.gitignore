@@ -1,0 +1,12 @@
+target
+lib/forge-std
+out/
+cache
+
+# npm package
+/run.js
+/install.js
+/binary.js
+/binary-install.js
+node_modules
+pnpm-lock.yaml

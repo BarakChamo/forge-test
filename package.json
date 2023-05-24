@@ -1,0 +1,31 @@
+{
+  "name": "forge-test",
+  "version": "0.0.1",
+  "private": true,
+  "main": "hooks/react.ts",
+  "types": "hooks/react.ts",
+  "scripts": {
+    "anvil": "source .env && anvil --chain-id $ANVIL_CHAIN_ID",
+    "clean": "forge clean",
+    "build": "wagmi generate --config wagmi.config.ts && yarn gen-deployer",
+    "deploy": "DEPLOYMENT_CONTEXT=localhost forge script deploy/Deploy.s.sol --rpc-url http://127.0.0.1:8545 --broadcast --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 -vvvvv && forge-deploy sync;",
+    "gen-deployer": "yarn forge-deploy gen-deployer --output ./build --sources ./contracts/src",
+    "up": "yarn anvil",
+    "test": "forge test"
+  },
+  "dependencies": {
+    "@wagmi/cli": "^1.0.0",
+    "@wagmi/core": "0.10.11",
+    "viem": "~0.3.18",
+    "wagmi": "0.12.13"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.31",
+    "@viem/anvil": "^0.0.6",
+    "eslint": "^8.15.0",
+    "eslint-config-next": "^12.1.6",
+    "forge-deploy": "^0.2.0",
+    "solhint": "^3.4.1",
+    "typescript": "^5.0.4"
+  }
+}

@@ -1,0 +1,23 @@
+[package]
+name = "forge-deploy"
+version = "0.2.0"
+edition = "2021"
+description = "A cli that goes along a set of soldity contract to keep track of deployments by name in forge."
+repository = "https://github.com/wighawag/forge-deploy"
+homepage = "https://github.com/wighawag/forge-deploy"
+documentation = "https://github.com/wighawag/forge-deploy#README.md"
+license = "MIT"
+
+[dependencies]
+handlebars = "3"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+regex = "1.7.3"
+clap = { version = "4.2.2", features = ["derive"] }
+walkdir = "2"
+substring = "1.4.5"
+path-slash = "0.2.1"
+
+[[bin]]
+path = "cli/main.rs"
+name = "forge-deploy"

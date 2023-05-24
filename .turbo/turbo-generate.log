@@ -1,0 +1,14 @@
+$ npm run wagmi
+npm WARN ignoring workspace config at /Users/barakchamo/Documents/dev/personal/turbopack/packages/blockchain/.npmrc 
+
+> @this/blockchain@0.0.1 wagmi
+> wagmi generate
+
+- Validating plugins
+✔ Validating plugins
+- Resolving contracts
+✔ Resolving contracts
+- Running plugins
+✔ Running plugins
+- Writing to src/generated.ts
+✔ Writing to src/generated.ts

@@ -1,0 +1,10 @@
+[profile.default]
+solc = "0.8.17"
+src = 'src'
+out = 'out'
+libs = ['lib']
+
+fs_permissions = [{ access = "read", path = "./deployments"}, { access = "read", path = "./out"}, { access = "read", path = "./contexts.json"}]
+
+# used for dev
+allow_paths = ["../../"]
